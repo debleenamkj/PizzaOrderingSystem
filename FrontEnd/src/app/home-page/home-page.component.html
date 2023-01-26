@@ -1,0 +1,10 @@
+<mat-drawer-container class="example-container" style="height: 100%;">
+ 
+    <mat-drawer-content style="background-image: url('assets/pizza1.jpg');background-size: cover;">
+            <mat-toolbar style="background-color: rgb(255, 166, 0);"><span style="margin-left: 2%;">Your hunger has arrived at a perfect destination... Welcome to Pizza Station</span></mat-toolbar>
+            <p>When you are hungry, pizza has its way to go from your mind, to fingers, to stomach. To satiate your starvation please click on one of the follwing...</p>
+            <button style="margin-top: 5%;" mat-stroked-button color="primary" routerLink="/accounts/register" routerLinkActive="active" style="text-decoration: none; color: white;">Register</button>
+            <button mat-stroked-button color="primary" routerLink="/accounts/login" routerLinkActive="active" style="text-decoration: none; color: white;">Login</button>
+            <router-outlet></router-outlet>
+    </mat-drawer-content>
+  </mat-drawer-container>

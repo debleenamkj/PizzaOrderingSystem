@@ -1,0 +1,11 @@
+<mat-drawer-container class="example-container" style="height: 100%;">
+    <mat-drawer mode="side" opened style="padding-right: 5%; padding-top: 2%; padding-left: 1%;">
+        <h1><a routerLink="/" routerLinkActive="active" style="color: white; text-decoration: none;">Pizza Ordering System</a></h1>
+        <h2 style="margin-top: 5%;"><a routerLink="/accounts/register" routerLinkActive="active" style="text-decoration: none; color: white;">Register</a></h2>
+        <h2><a routerLink="/accounts/login" routerLinkActive="active" style="text-decoration: none; color: white;">Login</a></h2>
+    </mat-drawer>
+    <mat-drawer-content>
+            <mat-toolbar style="background-color: rgb(255, 166, 0);"><span style="margin-left: 2%;">Pizza Ordering Accounts</span></mat-toolbar>
+            <router-outlet></router-outlet>
+    </mat-drawer-content>
+  </mat-drawer-container>

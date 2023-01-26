@@ -1,0 +1,20 @@
+
+<div *ngFor = "let pizzas of pizza" style="display:inline-block; flex-flow: row wrap; gap: 30px; margin-top: 15px; justify-content: center;" class="col-md-6 col-xl-3">
+    <mat-card class="example-card">
+        <img mat-card-image src="{{pizzas.imageurl}}" class="img-thumbnail w-60" style="text-align: center; justify-content: center; align-items: center; margin-left: 1px; margin-top: 2px;">
+        <mat-card-header style="margin-left: 40px; text-align: center;">
+            <mat-card-title>{{pizzas.pizzaname}}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content style="text-align: center;">
+            <div style="display: inline-flex; margin-top: 10px;">
+                <p>Size: {{pizzas.pizzasize}}</p>
+                <p style="text-align: left; margin-left: 150px;">Rs {{pizzas.price}}</p>
+            </div>
+        </mat-card-content>
+        <mat-card-actions style="text-align: center;">
+            <button mat-raised-button color="warn" (click)="deletePizza(pizzas)">Delete</button>
+        </mat-card-actions>
+    </mat-card>
+</div>
+<div *ngIf = "pizza.length===0"><h1 style="margin-top: 5%; text-align: center;">Your Cart is Empty</h1></div>
+

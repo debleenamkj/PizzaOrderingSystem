@@ -1,0 +1,16 @@
+<div [formGroup]="Login" style="display: flex;flex-direction: column; justify-content: center;width: 40%; padding: 5%;">
+    <h2>Login</h2>
+    <mat-form-field appearance="legacy">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="emailid" type="text">
+    </mat-form-field>
+    <mat-form-field appearance="legacy">
+        <mat-label>Password</mat-label>
+        <input matInput formControlName="password" type="password">
+    </mat-form-field>
+    <small style="color: red;">{{message}}</small>
+    <div style="display: flex;gap: 3.5vw;justify-content: center;align-items: center;margin-top: 20px;">
+        <button mat-stroked-button color="primary" routerLink="../register" >Register</button>
+        <button mat-stroked-button (click)="login()" [disabled]="!Login.valid" color="primary">Login</button>
+    </div>
+</div>
